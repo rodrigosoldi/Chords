@@ -10,6 +10,8 @@
 		FE408B90200C08D40048041C /* Chord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE408B86200C08D40048041C /* Chord.framework */; };
 		FE408B95200C08D40048041C /* ChordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE408B94200C08D40048041C /* ChordTests.swift */; };
 		FE408B97200C08D40048041C /* Chord.h in Headers */ = {isa = PBXBuildFile; fileRef = FE408B89200C08D40048041C /* Chord.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE408BA2200C097D0048041C /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE408BA0200C097C0048041C /* Chord.swift */; };
+		FE408BA3200C097D0048041C /* ChordExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE408BA1200C097C0048041C /* ChordExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		FE408B8F200C08D40048041C /* ChordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE408B94200C08D40048041C /* ChordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordTests.swift; sourceTree = "<group>"; };
 		FE408B96200C08D40048041C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE408BA0200C097C0048041C /* Chord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
+		FE408BA1200C097C0048041C /* ChordExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				FE408B89200C08D40048041C /* Chord.h */,
+				FE408BA0200C097C0048041C /* Chord.swift */,
+				FE408BA1200C097C0048041C /* ChordExtension.swift */,
 				FE408B8A200C08D40048041C /* Info.plist */,
 			);
 			path = Chord;
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					FE408B85200C08D40048041C = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					FE408B8E200C08D40048041C = {
@@ -196,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE408BA3200C097D0048041C /* ChordExtension.swift in Sources */,
+				FE408BA2200C097D0048041C /* Chord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +343,7 @@
 		FE408B9B200C08D40048041C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -346,6 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigosoldi.Chord;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +365,7 @@
 		FE408B9C200C08D40048041C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -374,6 +386,7 @@
 		FE408B9E200C08D40048041C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ChordTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -387,6 +400,7 @@
 		FE408B9F200C08D40048041C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ChordTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
